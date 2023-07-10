@@ -3,3 +3,18 @@ body{
   background-size:cover;
   height:100vh;
 }
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:100vh;
+  flex-direction: column;
+}
+
+.weather-box{
+  border:3px solid white;
+  padding:50px;
+  border-radius:30px;
+  background-color: azure;
+}

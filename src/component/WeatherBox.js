@@ -2,7 +2,7 @@ import React from 'react'
 
 const WeatherBox = () => {
   return (
-    <div>
+    <div className='weather-box'>
       <div>서울</div>
       <h2>30도/230화씨</h2>
       <h3>말근 하늘</h3>
