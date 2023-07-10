@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import './App.css';
+import WeatherBox from './component/WeatherBox';
 
 
 // 1. 앱이 실행되면 현재위치 기반의 날씨가 보임
@@ -20,7 +21,8 @@ function App() {
   }
 
   const getWeatherByCurrentLocation = async (lat, lon) =>{
-    let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=82846df8ec305de4ad82b0cdc6c7e2af`
+    const weatherApi = process.env.REACT_APP_WEATHERAPI;
+    let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${weatherApi}`
     let response = await fetch(url);
     let data = await response.json();
     console.log("data", data);
@@ -31,7 +33,7 @@ function App() {
   },[]);
   return (
     <div>
-      
+      <WeatherBox/>
     </div>
   );
 }
